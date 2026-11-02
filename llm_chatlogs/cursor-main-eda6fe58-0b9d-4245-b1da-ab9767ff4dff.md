@@ -243,7 +243,7 @@ Create a free Atlas cluster, a database user, and a connection string, then put 
 6. On the cluster, click **Connect → Drivers**, choose Node.js, and copy the `mongodb+srv://...` string. Replace `<username>` and `<password>`, and set the database name to `mp3`:
 
 ```text
-mongodb+srv://YOUR_USER:YOUR_PASSWORD@cluster0.xxxxx.mongodb.net/mp3?retryWrites=true&w=majority
+mongodb+srv://<username>:<password>@<cluster-host>/mp3?retryWrites=true&w=majority
 ```
 
 7. In the project folder, create `.env` and paste that string. Leave `TOKEN` as it is:
@@ -301,7 +301,7 @@ The security panel is a separate step. Open the project that contains the **MP3*
 5. Replace the username and password in the string. If the password contains `@`, `#`, `/`, or `%`, use the URL-encoded form (`@` is `%40`, `#` is `%23`). Put a database name, `mp3`, before the `?`:
 
 ```text
-mongodb+srv://YOUR_USER:YOUR_PASSWORD@mp3.xxxxx.mongodb.net/mp3?retryWrites=true&w=majority
+mongodb+srv://<username>:<password>@<cluster-host>/mp3?retryWrites=true&w=majority
 ```
 
 6. In the project folder, run `cp .env.example .env` and set `MONGODB_URI` to that string. Leave `TOKEN` unchanged. Do not commit `.env`.
